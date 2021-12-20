@@ -1,15 +1,12 @@
-setwd("~/MNM")
+## komenda w terminalu:
+## vcftools --vcf CPCT02220079.annotated.processed.vcf --out histo --hist-indel-len
 
-# library(vcfR)
-# library(filterVcf)
-# vcf_file <- "CPCT02220079.annotated.processed.vcf.gz"
+library(tidyverse)
+tab_hist <- read.table("histo.indel.hist")
 
-### Zadanie 4. #####
-## komendy w terminalu:
-## vcf2bed --insertions < CPCT02220079.annotated.processed2.vcf > insertions.bed
-## vcf2bed --deletions < CPCT02220079.annotated.processed2.vcf > deletions.bed
-## bedops --everything insertions.bed deletions.bed > indels.bed
 
-insertions <- read.table("insertions.bed")
-deletions <- read.table("deletions.bed")
-
+#dat2 %>%
+#  mutate(fill = ifelse(LENGTH <0, "del", "ins")) -> dat2
+#
+#ggplot(dat2)+
+#  geom_col(aes(x = LENGTH, y = COUNT, fill = fill))
