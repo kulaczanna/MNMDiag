@@ -18,5 +18,3 @@ fun =  function(x)
   return(my_list)
   
 }
-
-
