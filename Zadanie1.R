@@ -1,20 +1,25 @@
+library(stringr)
+
 fun =  function(x)
 {
-  library("stringr")
-  # x <- 'abcdef'
+  l <- str_length(x)
+  l1 <- seq(2,l,by=2)
+  l2 <- seq(1,l,by=2)
   
-  l <- nchar(x)
+  x_split <- str_split_fixed(x, "", l)
   
-  l1 <- seq(1,l,by=2)
-  l2 <- seq(2,l,by=2)
+  x1 <- x_split[l1]
+  x2 <- x_split[l2]
   
-  # substring(x, l1)
+  s1 <- str_c(x2, str_to_upper(x1))
+  s2 <- str_c(str_to_upper(x2), x1)
   
-  x1 <- str_to_upper(x)
-  x2 <- str_to_upper(x)
+  s11 <- str_c(s1, collapse = "")
+  s22 <- str_c(s2, collapse = "")
   
-  my_list <- list(x1, x2)
+  my_list <- list(s11, s22)
   
   return(my_list)
-  
 }
+
+fun("abcdef")
