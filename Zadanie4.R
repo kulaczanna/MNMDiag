@@ -1,9 +1,11 @@
 ## komenda w terminalu:
-## vcftools --vcf CPCT02220079.annotated.processed.vcf --out histo --hist-indel-len
+## vcftools --vcf chrom1.vcf --out histo --hist-indel-len 
+## dla każdego chromosomu
 
 library(tidyverse)
-tab_hist <- read.table("histo.indel.hist")
 
+setwd("~/work/histogramy_tab")
+tab_hist1 <- read.table("hist1.indel.hist")
 
 #dat2 %>%
 #  mutate(fill = ifelse(LENGTH <0, "del", "ins")) -> dat2
