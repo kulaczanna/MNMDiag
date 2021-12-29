@@ -1,11 +1,12 @@
 ## komenda w terminalu:
+## bcftools view -o chrom1.vcf -r '1' CPCT02220079.annotated.processed.vcf.gz
 ## vcftools --vcf chrom1.vcf --out hist1 --hist-indel-len 
 ## dla każdego chromosomu
 
 library(ggplot2)
 library(dplyr)
 
-setwd("~/MNM/zadanie4/histogramy_tab")
+setwd("~/work/histogramy_tab")
 tab_hist1 <- read.table("hist1.indel.hist", header = TRUE)
 tab_hist2 <- read.table("hist2.indel.hist", header = TRUE)
 tab_hist3 <- read.table("hist3.indel.hist", header = TRUE)

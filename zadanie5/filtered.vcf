@@ -1,0 +1,3 @@
+##SnpSiftVersion="SnpSift 5.0e (build 2021-03-09 06:01), by Pablo Cingolani"
+##SnpSiftCmd="SnpSift Filter 'AF < 0.01' hetzyg.vcf"
+##FILTER=<ID=SnpSift,Description="SnpSift 5.0e (build 2021-03-09 06:01), by Pablo Cingolani, Expression used: AF < 0.01">
